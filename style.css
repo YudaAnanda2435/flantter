@@ -2917,7 +2917,14 @@ footer {
   .doc-2c,
   .doc-1d,
   .doc-2d {
-    width: 340px;
+    width: 320px;
+  }
+    .doc-1a img,
+  .doc-2a img,
+  .doc-1c img,
+  .doc-2c img,
+  .doc-1d img {
+    width: 240px;
   }
 
   .pricing {
@@ -2934,10 +2941,8 @@ footer {
   .doc-2d {
     width: 320px;
   }
-}
 
-@media (max-width: 420px) {
-  .doc-1a,
+    .doc-1a,
   .doc-2a,
   .doc-1c,
   .doc-2c,
@@ -2952,6 +2957,9 @@ footer {
   .doc-1d img {
     width: 200px;
   }
+}
+
+@media (max-width: 420px) {
 
   .driblee,
   .figmaa,
