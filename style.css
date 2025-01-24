@@ -475,16 +475,6 @@ nav {
   transition: transform 0.3s ease;
 }
 
-.agency .drible:hover img,
-.agency .figma:hover img,
-.agency .upwork:hover img,
-.agency .pendo:hover img,
-.agency .canva:hover img,
-.agency .framer:hover img {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .drible,
 .figma,
 .upwork,
@@ -2938,6 +2928,16 @@ footer {
   .pricing {
     padding: 32px 20px;
   }
+
+    .driblee img,
+  .figmaa img,
+  .upworkk img,
+  .pendoo img,
+  .canvaa img,
+  .framerr img {
+    width: 92px;
+    height: 32px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -2999,7 +2999,7 @@ footer {
   }
 
   .pricing {
-    padding: 32px 10px;
+    padding: 32px 6px;
   }
 
   .question {
@@ -3059,6 +3059,12 @@ footer {
     height: auto;
     object-fit: contain;
   }
+
+  .background-shape {
+  width: 94%;
+  height: 200px;
+  margin-top: -220px;
+}
 }
 
 @media (max-width: 365px) {
