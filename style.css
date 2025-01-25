@@ -33,7 +33,6 @@ html {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-    overflow: hidden;
 }
 
 header {
@@ -99,6 +98,12 @@ nav {
 .dropdown:hover .fa-solid {
   transform: rotate(180deg);
   transition: transform 0.3s;
+}
+
+.get-started:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #000;
+  transition: 0.3s;
 }
 
 .nav-links .li {
@@ -248,7 +253,7 @@ nav {
 }
 
 .btn-star button a:hover {
- color: var(--primary-white);
+  color: var(--primary-white);
 }
 
 .hero {
@@ -473,6 +478,27 @@ nav {
 .agency .pendo img,
 .agency .canva img,
 .agency .framer img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.agency .drible img:hover,
+.agency .figma img:hover,
+.agency .upwork img:hover,
+.agency .pendo img:hover,
+.agency .canva img:hover,
+.agency .framer img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.agency2 .driblee img:hover,
+.agency2 .figmaa img:hover,
+.agency2 .upworkk img:hover,
+.agency2 .pendoo img:hover,
+.agency2 .canvaa img:hover,
+.agency2 .framerr img:hover {
+  transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
@@ -2124,7 +2150,12 @@ footer {
 @media (max-width: 768px) {
   nav {
     padding: 12px 60px;
-     font-size: 18px;
+    display: flex;
+    font-size: 18px;
+  }
+
+  .dropdown {
+    color: var(--primary-gray);
   }
 
   .tamplates {
@@ -2311,6 +2342,7 @@ footer {
     font-size: 54px;
     line-height: 52px;
   }
+
   .dropdown-menu {
     top: 10%;
     max-height: 100px;
@@ -2318,9 +2350,11 @@ footer {
     background-color: #fff;
     min-width: 80px;
   }
+
   .menu-toggle {
     z-index: 99;
   }
+
   nav ul.slide,
   .auth-buttons.slide {
     transform: translateX(0);
@@ -2331,8 +2365,9 @@ footer {
     margin-top: 60px;
     gap: 0;
   }
+
   #option {
-    color: #fff;
+    color: var(--primary-black);
   }
 
   #lg-logo {
@@ -2360,6 +2395,11 @@ footer {
     height: 280px;
     margin-top: -330px;
   }
+
+  nav ul {
+    display: none;
+  }
+
   /* .nav-links .li {
     display: flex;
     flex-direction: column;
@@ -2387,12 +2427,12 @@ footer {
   }
 
   .asked-heading p {
-  font-size: 14px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .doc-1d img {
     width: 160px;
@@ -2424,26 +2464,14 @@ footer {
     min-width: 80px;
   }
 
-  #option {
-    color: #fff;
-  }
-
   #lg-logo {
     z-index: 1;
   }
 
-  .nav-links button {
-    display: block;
-    padding: 4px 8px;
-    background-color: #fff;
-    border: none;
-    border-radius: 6px;
-  }
-
-  .nav-links button p {
-    color: #000;
-    font-family: var(--primary-font);
-    font-weight: 400;
+  #started {
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: var(--border-xs);
   }
 
   .nav-links li a {
@@ -2919,7 +2947,7 @@ footer {
   .doc-2d {
     width: 320px;
   }
-    .doc-1a img,
+  .doc-1a img,
   .doc-2a img,
   .doc-1c img,
   .doc-2c img,
@@ -2931,7 +2959,7 @@ footer {
     padding: 32px 20px;
   }
 
-    .driblee img,
+  .driblee img,
   .figmaa img,
   .upworkk img,
   .pendoo img,
@@ -2952,7 +2980,7 @@ footer {
     width: 320px;
   }
 
-    .doc-1a,
+  .doc-1a,
   .doc-2a,
   .doc-1c,
   .doc-2c,
@@ -2970,7 +2998,6 @@ footer {
 }
 
 @media (max-width: 420px) {
-
   .driblee,
   .figmaa,
   .upworkk,
@@ -3063,10 +3090,10 @@ footer {
   }
 
   .background-shape {
-  width: 94%;
-  height: 200px;
-  margin-top: -220px;
-}
+    width: 94%;
+    height: 200px;
+    margin-top: -220px;
+  }
 }
 
 @media (max-width: 365px) {

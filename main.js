@@ -44,7 +44,7 @@ window.addEventListener("scroll", function () {
   const liA = document.querySelector(".li a");
   const option = document.getElementById("option");
   const loginToggle = document.querySelector(".login-togle a");
-  const threshold = 700;
+  const threshold = 100;
 
   if (window.innerWidth > 768) {
     // Hanya berlaku untuk layar di atas 768px
@@ -69,7 +69,6 @@ window.addEventListener("scroll", function () {
       contact.style.color = "var(--primary-gray)";
       li.style.color = "var(--primary-gray)";
       liA.style.color = "var(--primary-gray)";
-      option.style.color = "var(--primary-gray)";
       nav.style.backgroundColor = "transparent";
       nav.style.backdropFilter = "blur(0)";
       nav.style.paddingBlock = "12px";
@@ -92,13 +91,13 @@ window.addEventListener("scroll", function () {
 
 // hidden toogle
 const menuToggled = document.querySelector(".menu-toggle");
-const navbar = document.getElementById("nav");
+const navbar = document.querySelector("nav ul");
 
 menuToggled.addEventListener("click", function () {
-  if (navbar.style.overflow === "visible") {
-    navbar.style.overflow = "hidden";
+  if (navbar.style.display === "none" || navbar.style.display === "") {
+    navbar.style.display = "block";
   } else {
-    navbar.style.overflow = "visible";
+    navbar.style.display = "none";
   }
 });
 // nav opacity scroll
