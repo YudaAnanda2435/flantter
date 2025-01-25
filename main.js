@@ -39,39 +39,53 @@ window.addEventListener("scroll", function () {
   const blog = document.getElementById("blog");
   const pricing = document.getElementById("pricing");
   const contact = document.getElementById("contact");
-  const features = this.document.getElementById("resource");
+  const features = document.getElementById("resource");
   const li = document.querySelector(".nav-links .li");
   const liA = document.querySelector(".li a");
   const option = document.getElementById("option");
-  const loginToggle = this.document.querySelector(".login-togle a");
-  const threshold = 200;
+  const loginToggle = document.querySelector(".login-togle a");
+  const threshold = 700;
 
-  if (window.scrollY >= threshold) {
+  if (window.innerWidth > 768) {
+    // Hanya berlaku untuk layar di atas 768px
+    if (window.scrollY >= threshold) {
+      nav.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      nav.style.backdropFilter = "blur(5px)";
+      li.style.color = "black";
+      loginToggle.style.color = "black";
+      features.style.color = "black";
+      blog.style.color = "black";
+      pricing.style.color = "black";
+      contact.style.color = "black";
+      liA.style.color = "black";
+      option.style.color = "black";
+      nav.style.display = "flex";
+      nav.style.justifyContent = "space-between";
+    } else {
+      blog.style.color = "var(--primary-gray)";
+      loginToggle.style.color = "var(--primary-gray)";
+      pricing.style.color = "var(--primary-gray)";
+      features.style.color = "var(--primary-gray)";
+      contact.style.color = "var(--primary-gray)";
+      li.style.color = "var(--primary-gray)";
+      liA.style.color = "var(--primary-gray)";
+      option.style.color = "var(--primary-gray)";
+      nav.style.backgroundColor = "transparent";
+      nav.style.backdropFilter = "blur(0)";
+      nav.style.paddingBlock = "12px";
+    }
+  } else {
+    // Reset aturan untuk layar di bawah 768px
     nav.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
     nav.style.backdropFilter = "blur(5px)";
-    li.style.color = "black";
-    loginToggle.style.color = "black";
-    features.style.color = "black";
-    blog.style.color = "black";
-    pricing.style.color = "black";
-    contact.style.color = "black";
-    liA.style.color = "black";
-    option.style.color = "black";
-    nav.style.display = "flex";
-    nav.style.justifyContent = "space-between";
-  } else {
-    blog.style.color = "var(--primary-gray)";
-    loginToggle.style.color = "var(--primary-gray)";
-    pricing.style.color = "var(--primary-gray)";
-    features.style.color = "var(--primary-gray)";
-    contact.style.color = "var(--primary-gray)";
-    li.style.color = "var(--primary-gray)";
-    liA.style.color = "var(--primary-gray)";
-    option.style.color = "var(--primary-gray)";
-    nav.style.backgroundColor = "transparent";
-    nav.style.backdropFilter = "blur(0)";
-    nav.style.paddingBlock = "12px";
-    option.style.color = "black";
+    li.style.color = "";
+    loginToggle.style.color = "";
+    features.style.color = "";
+    blog.style.color = "";
+    pricing.style.color = "";
+    contact.style.color = "";
+    liA.style.color = "";
+    option.style.color = "";
   }
 });
 // nav opacity scroll end
