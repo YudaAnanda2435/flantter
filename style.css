@@ -2767,6 +2767,17 @@ footer {
     display: none;
   }
 
+
+  .card1,
+.card2,
+.card3 {
+  border: 1px solid var(--disabled-border);
+  gap: 24px;
+  width: 100%;
+  border-radius: 14px;
+  padding: 6px;
+}
+
   .company-info {
     display: none;
   }
