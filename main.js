@@ -42,7 +42,6 @@ window.addEventListener("scroll", function () {
   const features = document.getElementById("resource");
   const li = document.querySelector(".nav-links .li");
   const liA = document.querySelector(".li a");
-  const option = document.getElementById("option");
   const loginToggle = document.querySelector(".login-togle a");
   const threshold = 100;
 
@@ -57,8 +56,6 @@ window.addEventListener("scroll", function () {
       blog.style.color = "black";
       pricing.style.color = "black";
       contact.style.color = "black";
-      liA.style.color = "black";
-      option.style.color = "black";
       nav.style.display = "flex";
       nav.style.justifyContent = "space-between";
     } else {
@@ -68,7 +65,6 @@ window.addEventListener("scroll", function () {
       features.style.color = "";
       contact.style.color = "";
       li.style.color = "var(--primary-gray)";
-      liA.style.color = "var(--primary-gray)";
       nav.style.backgroundColor = "transparent";
       nav.style.backdropFilter = "blur(0)";
       nav.style.paddingBlock = "12px";
@@ -84,7 +80,6 @@ window.addEventListener("scroll", function () {
     pricing.style.color = "";
     contact.style.color = "";
     liA.style.color = "";
-    option.style.color = "";
   }
 });
 // nav opacity scroll end
