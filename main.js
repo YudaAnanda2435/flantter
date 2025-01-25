@@ -62,11 +62,11 @@ window.addEventListener("scroll", function () {
       nav.style.display = "flex";
       nav.style.justifyContent = "space-between";
     } else {
-      blog.style.color = "var(--primary-gray)";
+      blog.style.color = "";
       loginToggle.style.color = "var(--primary-gray)";
-      pricing.style.color = "var(--primary-gray)";
-      features.style.color = "var(--primary-gray)";
-      contact.style.color = "var(--primary-gray)";
+      pricing.style.color = "";
+      features.style.color = "";
+      contact.style.color = "";
       li.style.color = "var(--primary-gray)";
       liA.style.color = "var(--primary-gray)";
       nav.style.backgroundColor = "transparent";
