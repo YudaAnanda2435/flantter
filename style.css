@@ -2299,9 +2299,9 @@ footer {
 }
 
 
-  /* .dropdown:hover .fa-solid {
-    transform: none !important;
-  } */
+  .dropdown:hover .fa-solid {
+    transform: none;
+  }
 
   /* Rotasi ikon saat dropdown diklik */
   .dropdown.active .fa-solid {
