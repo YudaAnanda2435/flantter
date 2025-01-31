@@ -33,6 +33,39 @@ menuToggle.addEventListener("click", function () {
 });
 // show toggle end
 
+
+// dropdown mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.querySelector(".dropdown");
+  const toggleBtn = document.querySelector(".dropdown > i");
+
+  function toggleDropdown() {
+    if (window.innerWidth <= 768) {
+      dropdown.classList.toggle("active"); // Toggle class "active" di layar kecil
+
+      // Tambahkan efek rotasi ikon saat diklik di layar kecil
+      toggleBtn.classList.toggle("rotated");
+    }
+  }
+
+  function handleResize() {
+    if (window.innerWidth > 768) {
+      // Pastikan hover tetap aktif di layar besar
+      dropdown.classList.remove("active");
+      toggleBtn.classList.remove("rotated"); // Reset rotasi ikon
+    }
+  }
+
+  if (dropdown && toggleBtn) {
+    dropdown.addEventListener("click", toggleDropdown);
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Jalankan saat halaman pertama dimuat
+  }
+});
+
+// dropdown mobile
+
+
 // nav opacity scroll start
 window.addEventListener("scroll", function () {
   const nav = document.getElementById("nav");
@@ -99,26 +132,29 @@ menuToggled.addEventListener("click", function () {
 
 // asked start
 document.querySelectorAll(".option-asked > div").forEach(function (asked) {
-  const icon = asked.querySelector(".fa-solid");
-  const paragraph = asked.querySelector("p");
+  asked.addEventListener("click", function () {
+    const icon = asked.querySelector(".fa-solid");
+    const paragraph = asked.querySelector("p");
 
-  icon.addEventListener("click", function () {
+    // Tutup semua jawaban yang sedang terbuka, kecuali yang sedang diklik
     document.querySelectorAll(".option-asked p").forEach(function (p) {
       if (p !== paragraph) {
         p.classList.remove("show");
       }
     });
 
+    // Reset ikon yang lain ke posisi awal
     document.querySelectorAll(".fa-solid").forEach(function (otherIcon) {
       if (otherIcon !== icon) {
         otherIcon.classList.remove("rotate");
       }
     });
+
+    // Toggle kelas untuk menampilkan jawaban dan memutar ikon
     paragraph.classList.toggle("show");
     icon.classList.toggle("rotate");
   });
 });
-
 // asked end
 
 // chose pricing start

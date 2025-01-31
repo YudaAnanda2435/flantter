@@ -58,6 +58,14 @@ nav {
   backdrop-filter: blur(0);
 }
 
+
+.just{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -79,7 +87,7 @@ nav {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  /* left: 0; */
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -2151,11 +2159,7 @@ footer {
   nav {
     padding: 12px 60px;
     display: flex;
-    font-size: 18px;
-  }
-
-  .dropdown {
-    color: var(--primary-gray);
+    font-size: 16px;
   }
 
   .tamplates {
@@ -2251,10 +2255,87 @@ footer {
   .auth-buttons {
     display: none;
   }
-  .dropdown-menu li {
-    padding: 8px 10px;
-    text-decoration: none;
+
+  .dropdown {
+    color: var(--primary-gray);
+    display: flex;
+    flex-direction: column;
   }
+
+  #opt{
+  color: var(--primary-black);
+}
+
+#started:hover{
+  color: var(--primary-P01);
+}
+
+  /* .dropdown-menu {
+    top: 10%;
+    max-height: 100px;
+    font-size: 10px;
+    background-color: #fff;
+    min-width: 80px;
+  } */
+
+  .dropdown-menu {
+    display: none;
+    position: static;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* background: transparent !important; */
+    box-shadow: none;
+    right: 0;
+    top: 10%;
+    max-height: 100px;
+    font-size: 10px;
+    background-color: #fff;
+    min-width: 80px;
+  }
+
+
+  .dropdown:hover .dropdown-menu {
+  display: none;
+}
+
+
+  /* .dropdown:hover .fa-solid {
+    transform: none !important;
+  } */
+
+  /* Rotasi ikon saat dropdown diklik */
+  .dropdown.active .fa-solid {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
+
+  .dropdown.active .dropdown-menu {
+    /* top: 10%; */
+    /* display: none; */
+    display: block;
+    display: flex;
+    align-items: start;
+    /* text-align: start; */
+     transition: transform 0.3s;
+     flex-direction: column;
+    /* margin: auto; */
+    /* max-height: 100px;
+    font-size: 10px;
+    min-width: 80px; */
+  }
+
+  .dropdown-menu li {
+    padding: 8px 4px;
+    text-decoration: none;
+    background: transparent;
+    font-size: 12px;
+  }
+
+
+  .nav-links .li {
+    align-items: start;
+  }
+
   .heading-pricing {
     display: flex;
     flex-direction: column;
@@ -2319,7 +2400,7 @@ footer {
     align-items: center;
     background-color: white;
     z-index: 2;
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
     padding: 20px;
   }
 
@@ -2343,14 +2424,6 @@ footer {
     line-height: 52px;
   }
 
-  .dropdown-menu {
-    top: 10%;
-    max-height: 100px;
-    font-size: 10px;
-    background-color: #fff;
-    min-width: 80px;
-  }
-
   .menu-toggle {
     z-index: 99;
   }
@@ -2366,7 +2439,7 @@ footer {
     gap: 0;
   }
 
-  .li a:hover{
+  .li a:hover {
     color: #000;
   }
 
@@ -2379,7 +2452,7 @@ footer {
   }
   .nav-links button {
     display: block;
-    padding: 4px 8px;
+    padding: 4px 0;
     background-color: #fff;
     border: none;
     border-radius: 6px;
@@ -2403,15 +2476,6 @@ footer {
   nav ul {
     display: none;
   }
-
-  /* .nav-links .li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 30px;
-    align-items: center;
-    color: #fff;
-  } */
 }
 
 @media (max-width: 680px) {
