@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -27,66 +28,67 @@
     <title>flantter-builder</title>
   </head>
   <body>
-   
-      <header>
-        <!-- Navbar start -->
-        <nav id="nav">
-          <!-- Logo -->
-          <div>
-            <a id="lg-logo" href="#">
-              <img src="./assets/Logo.svg" alt="Logo"
-            /></a>
-          </div>
+    <header>
+      <!-- Navbar start -->
+      <nav id="nav">
+        <!-- Logo -->
+        <div>
+          <a id="lg-logo" href="#">
+            <img src="./assets/Logo.svg" alt="Logo"
+          /></a>
+        </div>
 
-          <!-- Navigation Links -->
-          <ul id="nav-links" class="nav-links">
-            <div class="li">
-              
-              <li class="dropdown">
-                Resource
-                <i id="option" class="fa-solid fa-angle-down"></i>
-                <ul
-                  class="dropdown-menu animate__animated animate__zoomIn animate__faster"
-                >
-                  <li><a id="opt" href="">Detail Price</a></li>
-                  <li><a id="opt" href="">services</a></li>
-                  <li><a id="opt" href="">Warranty</a></li>
-                </ul>
-              </li>
-              <li><a id="resource" href="#">Features</a></li>
-              <li><a id="blog" href="#">Blog</a></li>
-              <li><a id="pricing" href="#">Pricing</a></li>
-              <li><a id="contact" href="#">Contact</a></li>
-              <li class="login-togle"><a href="#">login</a></li>
-              <div class="btn-star">
+        <!-- Navigation Links -->
+        <ul id="nav-links" class="nav-links">
+          <div class="li">
+            <li class="dropdown">
+              Resource
+              <i id="option" class="fa-solid fa-angle-down"></i>
+              <ul class="dropdown-menu">
+                <li><a id="opt" href="">Detail Price</a></li>
+                <li><a id="opt" href="">services</a></li>
+                <li><a id="opt" href="">Warranty</a></li>
+              </ul>
+            </li>
+            <li><a id="resource" href="#">Features</a></li>
+            <li><a id="blog" href="#">Blog</a></li>
+            <li><a id="pricing" href="#">Pricing</a></li>
+            <li><a id="contact" href="#">Contact</a></li>
+            <li class="login-togle"><a href="#">login</a></li>
+            <div class="btn-star">
               <button>
                 <a id="started" href="#">Get Started</a>
               </button>
-              </div>
             </div>
-          </ul>
+          </div>
+        </ul>
 
-          <!-- Login and Get Started -->
-          <div class="auth-buttons">
-            <a href="#">Login</a>
-            <button class="get-started"><a href="">Get Started</a></button>
-          </div>
-          <div class="menu-toggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </header>
+        <!-- Login and Get Started -->
+        <div class="auth-buttons">
+          <a href="#">Login</a>
+          <button class="get-started"><a href="">Get Started</a></button>
+        </div>
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
       <!-- Navbar end -->
+    </header>
 
-       <div class="container">
-      <!-- Hero start -->
-      <section class="hero">
+    <!-- Hero start -->
+    <section class="hero">
+      <div class="hero-container">
         <div class="div hero-content">
           <div class="icon">
-            <ul class="icon-list">
+            <ul
+              class="icon-list"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <li><img src="./assets/figma.svg" alt="Figma" /></li>
               <li><img src="./assets//flutter.svg" alt="Flutter" /></li>
               <li><img src="./assets//webflow.svg" alt="Webflow" /></li>
@@ -94,13 +96,17 @@
           </div>
 
           <div class="heading">
-            <h1>
+            <h1
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               Design Stunning <br />
               Websites in Minutes
             </h1>
           </div>
           <div class="paragraf-hero">
-            <p>
+            <p data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
               Design and launch professional, fully customizable websites in
               just a few clicks. Simplify your workflow with tools built for
               creativity and efficiency <br />
@@ -108,25 +114,43 @@
             </p>
           </div>
           <div class="start-now">
-            <button>
+            <button
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <span><a href="">Start Now Builder</a></span>
             </button>
           </div>
         </div>
 
-        <div class="hero-img">
+        <div
+          class="hero-img"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <img src="./assets/hero_img.png" alt="Hero Image" class="hero-img" />
         </div>
-      </section>
-      <!-- hero end -->
+      </div>
+    </section>
+    <!-- hero end -->
 
-      <!-- hero img start-->
+    <!-- hero img start-->
+    <div class="background-shape-container">
       <div class="background-shape"></div>
-      <!-- hero img end -->
+    </div>
+    <!-- hero img end -->
 
-      <!-- company start -->
-      <section class="company">
-        <div class="company-info">
+    <!-- company start -->
+    <section class="company">
+      <div class="company-container">
+        <div
+          class="company-info"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <h3>
             Trusted by <br />
             Agency Company
@@ -137,7 +161,12 @@
           </p>
         </div>
 
-        <div class="agency">
+        <div
+          class="agency"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <div class="logo">
             <div class="drible">
               <img src="/assets/Company logo.svg" alt="" />
@@ -161,12 +190,19 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- company end -->
+      </div>
+    </section>
+    <!-- company end -->
 
-      <!-- comany2 start -->
-      <section class="company2">
-        <div class="company-info2">
+    <!-- comany2 start -->
+    <section class="company2">
+      <div class="company2-container">
+        <div
+          class="company-info2"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <h3 class="h3" data-aos="fade-up">
             Trusted by <br />
             Agency Company
@@ -176,7 +212,12 @@
             just a few clicks.
           </p>
         </div>
-        <div class="agency2">
+        <div
+          class="agency2"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <div class="logoA">
             <div class="driblee">
               <img src="/assets/Company logo.svg" alt="" />
@@ -205,14 +246,20 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- comany2 start -->
+      </div>
+    </section>
+    <!-- comany2 start -->
 
-
-      <!-- new fiture start-->
-      <section class="feature">
+    <!-- new fiture start-->
+    <section class="feature">
+      <div class="feature-container">
         <div class="heading-feature">
-          <div class="feature-information">
+          <div
+            class="feature-information"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <p><img src="/assets/feature.svg" alt="" /> New Feature</p>
             <h2>
               Unlock the Power <br />
@@ -220,7 +267,7 @@
             </h2>
           </div>
           <div class="feature-desc">
-            <p>
+            <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
               Design and launch professional, fully customizable websites in
               just a few <br />
               clicks. Simplify your workflow with tools built for creativity and
@@ -234,7 +281,12 @@
         <!--  isi contentstart-->
         <div class="content">
           <div class="media-doc1">
-            <div class="doc-1a">
+            <div
+              class="doc-1a"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <img src="/assets/mediaA1.svg" alt="" />
               <div class="doc-p">
                 <h3>
@@ -247,7 +299,12 @@
                 </p>
               </div>
             </div>
-            <div class="doc-2a">
+            <div
+              class="doc-2a"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <img src="/assets/mediaA2.svg" alt="" />
 
               <div class="doc-p">
@@ -260,7 +317,12 @@
             </div>
           </div>
           <div class="media-doc2">
-            <div class="doc-1c">
+            <div
+              class="doc-1c"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <img src="/assets/mediaB1.svg" alt="" />
               <div class="doc-p">
                 <h3>Seamless Integration</h3>
@@ -270,7 +332,12 @@
                 </p>
               </div>
             </div>
-            <div class="doc-2c">
+            <div
+              class="doc-2c"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <img src="/assets/mediaB2.svg" alt="" />
               <div class="doc-p">
                 <h3>No Code To Make A Website</h3>
@@ -282,7 +349,12 @@
               </div>
             </div>
           </div>
-          <div class="media-doc3">
+          <div
+            class="media-doc3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <div class="doc-1d">
               <img src="/assets/mediaC1.svg" alt="" />
               <div class="doc-p">
@@ -293,7 +365,12 @@
                 </p>
               </div>
             </div>
-            <div class="doc-2d">
+            <div
+              class="doc-2d"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <img src="/assets/C10.svg" alt="" />
               <div class="doc-p">
                 <h3>Secure and Scalable Solutions</h3>
@@ -307,97 +384,121 @@
           </div>
         </div>
         <!--  isi content end-->
-      </section>
-      <!-- new fiture end-->
-        </div>
-      
+      </div>
+    </section>
+    <!-- new fiture end-->
 
-       <!-- <div class="container"> -->
-      <!-- banner documentation start-->
-      <section class="banner">
-        <div class="banner-content">
-          <div class="document-banner">
-            <div class="head-banner">
-              <p><img src="/assets/feature.svg" alt="" />Documentation</p>
+    <!-- banner documentation start-->
+    <section
+      class="banner"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+    >
+      <div class="banner-content">
+        <div
+          class="document-banner"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+          <div class="head-banner">
+            <p><img src="/assets/feature.svg" alt="" />Documentation</p>
 
-              <h2>Documentation that converts users</h2>
-              <p class="deliver">
-                Deliver user-friendly, clear, and actionable documentation that
-                simplifies complex processes, <br />
-                builds trust, and drives users toward success effortlessly.
+            <h2>Documentation that converts users</h2>
+            <p class="deliver">
+              Deliver user-friendly, clear, and actionable documentation that
+              simplifies complex processes, <br />
+              builds trust, and drives users toward success effortlessly.
+            </p>
+          </div>
+          <div class="paragraf-banner">
+            <div class="scroll1">
+              <h4>Working Space</h4>
+              <p id="pb1">
+                Customize your coding experience and expand your skills
+                effortlessly.
               </p>
             </div>
-            <div class="paragraf-banner">
-              <div class="scroll1">
-                <h4>Working Space</h4>
-                <p class="show">
-                  Customize your coding experience and expand your skills
-                  effortlessly.
-                </p>
-              </div>
-              <div class="scroll2">
-                <h4>Dashboard Menu</h4>
-                <p>
-                  Customize your coding experience and expand your skills
-                  effortlessly.
-                </p>
-              </div>
-              <div class="scroll3">
-                <h4>Template Marketplace</h4>
-                <p>
-                  Customize your coding experience and expand your skills
-                  effortlessly.
-                </p>
-              </div>
-              <div class="scroll4">
-                <h4>Updated Liblary</h4>
-                <p>
-                  Customize your coding experience and expand your skills
-                  effortlessly.
-                </p>
-              </div>
+            <div class="scroll2">
+              <h4>Dashboard Menu</h4>
+              <p id="pb2">
+                Customize your coding experience and expand your skills
+                effortlessly.
+              </p>
             </div>
-          </div>
-          <div class="img-banner">
-            <div class="img-wrapper">
-              <div>
-                <img src="/assets/banner_img.png" alt="" />
-              </div>
-              <div>
-                <img src="/assets/banner_img.png" alt="" />
-              </div>
-              <div>
-                <img src="/assets/banner_img.png" alt="" />
-              </div>
-              <div>
-                <img src="/assets/banner_img.png" alt="" />
-              </div>
-              <div>
-                <img src="/assets/banner_img.png" alt="" />
-              </div>
+            <div class="scroll3">
+              <h4>Template Marketplace</h4>
+              <p id="pb3">
+                Customize your coding experience and expand your skills
+                effortlessly.
+              </p>
+            </div>
+            <div class="scroll4">
+              <h4>Updated Liblary</h4>
+              <p id="pb4">
+                Customize your coding experience and expand your skills
+                effortlessly.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <!-- banner documentation end -->
-       <!-- </div> -->
+        <div class="img-banner">
+          <div
+            class="img-wrapper"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="500"
+          >
+            <div>
+              <img src="/assets/banner_img.png" alt="" />
+            </div>
+            <div>
+              <img src="/assets/banner_img.png" alt="" />
+            </div>
+            <div>
+              <img src="/assets/banner_img.png" alt="" />
+            </div>
+            <div>
+              <img src="/assets/banner_img.png" alt="" />
+            </div>
+            <div>
+              <img src="/assets/banner_img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner documentation end -->
 
-
-       <div class="container">
-      <!-- pricing start -->
-      <section class="pricing">
+    <!-- pricing start -->
+    <section class="pricing">
+      <div class="pricing-container">
         <div class="heading-pricing">
-          <div class="pricing1">
-            <p><img src="/assets/feature.svg" alt="" /> Pricing plane</p>
-            <h3>Choose Pricing</h3>
-            <p class="content-pricing">
+          <div
+            class="pricing1"
+          >
+            <p   data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"><img src="/assets/feature.svg" alt="" /> Pricing plane</p>
+            <h3   data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000">Choose Pricing</h3>
+            <p class="content-pricing"   data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000">
               Deliver user-friendly, clear, and actionable documentation that
               simplifies complex <br />
               processes, builds trust, and drives users toward success
               effortlessly.
             </p>
           </div>
-          <div class="year">
+          <div
+            class="year"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <div class="this-year">
               <p id="monthly">Monthly</p>
               <label class="switch">
@@ -409,7 +510,12 @@
           </div>
         </div>
         <div class="pricing-card">
-          <div class="card1">
+          <div
+            class="card1"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <div class="option1">
               <div class="plan">
                 <h3>Basic Plan</h3>
@@ -442,7 +548,12 @@
               </ul>
             </div>
           </div>
-          <div class="card2">
+          <div
+            class="card2"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <div class="option1">
               <div class="plan">
                 <h3>Profesional Plan</h3>
@@ -479,7 +590,12 @@
               </ul>
             </div>
           </div>
-          <div class="card3">
+          <div
+            class="card3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <div class="option1">
               <div class="card3font">
                 <div class="businnes">
@@ -523,23 +639,34 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- pricing end -->
-      
+      </div>
+    </section>
+    <!-- pricing end -->
 
-      <!-- question start -->
-      <section class="question">
+    <!-- question start -->
+    <section class="question">
+      <div class="question-container">
         <div class="asked-heading">
-          <p><img src="/assets/feature.svg" alt="" />FAQ</p>
-          <h2>Frequently asked question</h2>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="/assets/feature.svg" alt="" />FAQ
+          </p>
+          <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            Frequently asked question
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             We've been told it's possible to supercharge the design process.
             Instead of reinventing the wheel, we chose to enhance it –
             delivering exceptional results.
           </p>
         </div>
         <div class="option-asked">
-          <div id="askeding" class="asked-a">
+          <div
+            id="askeding"
+            class="asked-a"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <h4>
               Why should you use mangcoding ?<i
                 class="fa-solid fa-angle-down"
@@ -552,7 +679,12 @@
               business.
             </p>
           </div>
-          <div class="asked-b">
+          <div
+            class="asked-b"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <h4>
               What makes Mangcoding's SaaS <br />
               finance solutions secure?
@@ -565,7 +697,12 @@
               business.
             </p>
           </div>
-          <div class="asked-c">
+          <div
+            class="asked-c"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <h4>
               How can Mangcoding’s SaaS finance <br />
               solutions help my business?<i class="fa-solid fa-angle-down"></i>
@@ -577,7 +714,12 @@
               business.
             </p>
           </div>
-          <div class="asked-d">
+          <div
+            class="asked-d"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <h4>
               Is Mangcoding’s SaaS finance solution <br />
               scalable?<i class="fa-solid fa-angle-down"></i>
@@ -589,7 +731,12 @@
               business.
             </p>
           </div>
-          <div class="asked-e">
+          <div
+            class="asked-e"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
             <h4>
               Can Mangcoding integrate with existing <br />
               financial systems?<i class="fa-solid fa-angle-down"></i>
@@ -602,24 +749,39 @@
             </p>
           </div>
         </div>
-      </section>
-      <!-- question end -->
+      </div>
+    </section>
+    <!-- question end -->
 
-      <!-- Carousel start-->
-      <section class="carousel">
-        <div class="paragraph-carousel">
-          <div class="testimonial-carousel">
+    <!-- Carousel start-->
+    <section class="carousel">
+      <div class="carousel-container">
+        <div
+          class="paragraph-carousel"
+        >
+          <div class="testimonial-carousel"   data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000">
             <img src="/assets/feature.svg" alt="" />
             <p>Testimonial</p>
           </div>
-          <h2>What Our Users Say</h2>
-          <p>
+          <h2   data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000">What Our Users Say</h2>
+          <p   data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000">
             Real stories of how Flutter Builder empowers creators and delivers
             results—showcasing our commitment to excellence
           </p>
         </div>
 
-        <div class="swiper-container">
+        <div
+          class="swiper-container"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card-carousel">
@@ -693,7 +855,7 @@
                 </div>
               </div>
             </div>
-           <div class="swiper-slide">
+            <div class="swiper-slide">
               <div class="card-carousel">
                 <div class="biodata-carousel">
                   <div class="img-carousel">
@@ -794,93 +956,113 @@
             </div>
           </div>
         </div> -->
-      </section>
-      <!-- Carousel end-->
-</div>
+      </div>
+    </section>
+    <!-- Carousel end-->
 
+    <!-- tamplate start -->
+    <section class="tamplates">
+      <div class="heading-template">
+        <div
+          class="them"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="500"
+        >
+          <p><img src="/assets/feature.svg" alt="" />Template Them</p>
+        </div>
+        <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          Some templates that our <br />
+          users have created
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          We've been told it's possible to supercharge the design process.
+          Instead of reinventing the wheel, we chose to enhance it – delivering
+          <br />
+          exceptional results.
+        </p>
+        <div
+          class="btn-tamplate"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+          <button>
+            <span><a href="#">See Other Template</a></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- tamplate end -->
 
-      <!-- tamplate start -->
-      <section class="tamplates">
-        <div class="heading-template">
-          <div class="them">
-            <p><img src="/assets/feature.svg" alt="" />Template Them</p>
-          </div>
-          <h2>
-            Some templates that our <br />
-            users have created
-          </h2>
+    <!-- footer start -->
+    <footer>
+      <div
+        class="column1"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        <div class="child-column1">
+          <img src="/assets/Logo_white.svg" alt="" />
           <p>
-            We've been told it's possible to supercharge the design process.
-            Instead of reinventing the wheel, we chose to enhance it –
-            delivering
+            Flantter Builder Flantter Builder empowers you to create dynamic
             <br />
-            exceptional results.
+            and engaging websites effortlessly. With advanced <br />
+            tools and intuitive design features, bring your ideas <br />
+            to life and captivate your audience with visually <br />
+            stunning experiences.
           </p>
-          <div class="btn-tamplate">
-            <button>
-              <span><a href="#">See Other Template</a></span>
-            </button>
+        </div>
+        <h5>© 2024flantterbuilder. All rights reserved.</h5>
+      </div>
+      <div
+        class="column2"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        <div class="space1">
+          <div class="tbl-1">
+            <h4>Features</h4>
+            <p>Explore Features</p>
+            <p>Key Benefits</p>
+          </div>
+          <div class="tbl-2">
+            <h4>Pricing</h4>
+            <p>Pricing Plans</p>
+            <p>Discounts & Offers</p>
+          </div>
+          <div class="tbl-3">
+            <h4>About Us</h4>
+            <p>Company Overview</p>
+            <p>Our Mission</p>
           </div>
         </div>
-      </section>
-      <!-- tamplate end -->
-
-      <!-- footer start -->
-      <footer>
-        <div class="column1">
-          <div class="child-column1">
-            <img src="/assets/Logo_white.svg" alt="" />
-            <p>
-              Flantter Builder Flantter Builder empowers you to create dynamic
-              <br />
-              and engaging websites effortlessly. With advanced <br />
-              tools and intuitive design features, bring your ideas <br />
-              to life and captivate your audience with visually <br />
-              stunning experiences.
-            </p>
+        <div class="space2">
+          <div class="tbl-4">
+            <h4>Extention</h4>
+            <p>API Support</p>
+            <p>Additional</p>
           </div>
-          <h5>© 2024flantterbuilder. All rights reserved.</h5>
-        </div>
-        <div class="column2">
-          <div class="space1">
-            <div class="tbl-1">
-              <h4>Features</h4>
-              <p>Explore Features</p>
-              <p>Key Benefits</p>
-            </div>
-            <div class="tbl-2">
-              <h4>Pricing</h4>
-              <p>Pricing Plans</p>
-              <p>Discounts & Offers</p>
-            </div>
-            <div class="tbl-3">
-              <h4>About Us</h4>
-              <p>Company Overview</p>
-              <p>Our Mission</p>
-            </div>
+          <div class="tbl-5">
+            <h4>Resource</h4>
+            <p>Documentation</p>
+            <p>Tutorials</p>
           </div>
-          <div class="space2 ">
-            <div class="tbl-4">
-              <h4>Extention</h4>
-              <p>API Support</p>
-              <p>Additional</p>
-            </div>
-            <div class="tbl-5">
-              <h4>Resource</h4>
-              <p>Documentation</p>
-              <p>Tutorials</p>
-            </div>
-            <div class="tbl-6">
-              <h4>Community</h4>
-              <p>Forum</p>
-              <p>Blog</p>
-            </div>
+          <div class="tbl-6">
+            <h4>Community</h4>
+            <p>Forum</p>
+            <p>Blog</p>
           </div>
         </div>
-      </footer>
-      <!-- footer end-->
-    
-     </div>
+      </div>
+    </footer>
+    <!-- footer end-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="main.js"></script>
   </body>
 </html>

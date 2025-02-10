@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slideToClickedSlide: false,
     slideActiveClass: "active",
     autoplay: {
-      delay: 5000, // Delay in milliseconds (1000 ms = 1 second)
+      delay: 5000,                    
       disableOnInteraction: false,
     },
     breakpoints: {
@@ -27,9 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // show toggle start
 const menuToggle = document.querySelector(".menu-toggle input");
 const nav = document.querySelector("nav ul");
+const body = document.body;
 
 menuToggle.addEventListener("click", function () {
   nav.classList.toggle("slide");
+  body.classList.toggle("no-scroll");
 });
 // show toggle end
 
@@ -41,25 +43,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleDropdown() {
     if (window.innerWidth <= 768) {
-      dropdown.classList.toggle("active"); // Toggle class "active" di layar kecil
+      dropdown.classList.toggle("active"); 
 
-      // Tambahkan efek rotasi ikon saat diklik di layar kecil
       toggleBtn.classList.toggle("rotated");
     }
   }
 
   function handleResize() {
     if (window.innerWidth > 768) {
-      // Pastikan hover tetap aktif di layar besar
+
       dropdown.classList.remove("active");
-      toggleBtn.classList.remove("rotated"); // Reset rotasi ikon
+      toggleBtn.classList.remove("rotated");
     }
   }
 
   if (dropdown && toggleBtn) {
     dropdown.addEventListener("click", toggleDropdown);
     window.addEventListener("resize", handleResize);
-    handleResize(); // Jalankan saat halaman pertama dimuat
+    handleResize(); 
   }
 });
 
@@ -118,16 +119,16 @@ window.addEventListener("scroll", function () {
 // nav opacity scroll end
 
 // hidden toogle
-const menuToggled = document.querySelector(".menu-toggle");
-const navbar = document.querySelector("nav ul");
+// const menuToggled = document.querySelector(".menu-toggle");
+// const navbar = document.querySelector("nav ul");
 
-menuToggled.addEventListener("click", function () {
-  if (navbar.style.display === "none" || navbar.style.display === "") {
-    navbar.style.display = "block";
-  } else {
-    navbar.style.display = "none";
-  }
-});
+// menuToggled.addEventListener("click", function () {
+//   if (navbar.style.display === "none" || navbar.style.display === "") {
+//     navbar.style.display = "block";
+//   } else {
+//     navbar.style.display = "none";
+//   }
+// });
 // nav opacity scroll
 
 // asked start
@@ -194,28 +195,61 @@ document.addEventListener("DOMContentLoaded", function () {
 // menu toggle start
 
 // p banner
-const headings = document.querySelectorAll(".paragraf-banner > div h4");
-let currentIndex = 1;
+function showParagraph(id, duration) {
+  const paragraph = document.getElementById(id);
 
-function toggleParagraph(index) {
-  const parentDiv = headings[index].parentElement;
-  const paragraph = parentDiv.querySelector("p");
-
-  document.querySelectorAll(".paragraf-banner > div p").forEach(function (p) {
-    p.classList.remove("show");
-    p.parentElement.classList.remove("active");
-  });
+  // Tampilkan paragraf
   paragraph.classList.add("show");
-  parentDiv.classList.add("active");
+
+  // Sembunyikan setelah durasi yang ditentukan
+  setTimeout(() => {
+    paragraph.classList.remove("show");
+  }, duration);
 }
 
-function autoPlay() {
-  toggleParagraph(currentIndex);
+function startCycle() {
+  setTimeout(() => showParagraph("pb1", 20400), 0);
+  setTimeout(() => showParagraph("pb2", 14900), 5500);
+  setTimeout(() => showParagraph("pb3", 9200), 11400);
+  setTimeout(() => showParagraph("pb4", 3900), 16800);
 
-  currentIndex = (currentIndex + 1) % headings.length;
+  // Restart siklus setelah 22 detik
+  setTimeout(startCycle, 22000);
 }
-setInterval(autoPlay, 5000);
+
+// Mulai pertama kali
+startCycle();
 // p banner
+
+// garis merosot start
+function resetAnimation() {
+  const elements = document.querySelectorAll(".paragraf-banner > div");
+
+  // Hapus class "reset" untuk mereset animasi
+  elements.forEach((el) => {
+    el.classList.remove("reset");
+  });
+
+  // Paksa browser mendeteksi perubahan (trik untuk restart animasi)
+  void document.body.offsetWidth;
+
+  // Tambahkan kembali class "reset" setelah delay singkat
+  setTimeout(() => {
+    elements.forEach((el) => {
+      el.classList.add("reset");
+    });
+  }, 100); // Delay kecil agar efek reset terasa alami
+}
+
+// Jalankan animasi pertama kali langsung
+resetAnimation();
+
+// Sinkronkan reset dengan siklus 22 detik
+setInterval(resetAnimation, 22000);
+
+
+
+// garis merosot end
 
 // banner slider start
 const imageWrapper = document.querySelector(".img-wrapper");
@@ -223,7 +257,7 @@ const imageItems = document.querySelectorAll(".img-wrapper > *");
 const imageLength = imageItems.length;
 const perView = 1;
 let totalScroll = 0;
-const delay = 5000;
+const delay = 5500;
 
 imageWrapper.style.setProperty("--per-view", perView);
 for (let i = 0; i < perView; i++) {
@@ -247,3 +281,5 @@ function scrolling() {
   imageWrapper.style.transition = ".5s";
 }
 // banner slider end
+
+
