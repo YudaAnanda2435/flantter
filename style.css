@@ -91,7 +91,7 @@ nav {
   min-width: 100px;
 }
 
-.line{
+.line {
   display: none;
 }
 
@@ -2365,63 +2365,62 @@ footer {
   .line {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     margin-bottom: 14px;
     padding-left: 4px;
-    font-size: 12px;
+    font-size: 14px;
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
+  }
 
-.line.show {
+  .line.show {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 
-.line p {
+  .line p {
     opacity: 0;
     transform: translateY(10px);
     animation: fadeIn 0.6s ease-in-out forwards;
-}
+  }
 
-.line.show p:nth-child(1) {
+  .line.show p:nth-child(1) {
     animation-delay: 0.1s;
-}
+  }
 
-.line.show p:nth-child(2) {
+  .line.show p:nth-child(2) {
     animation-delay: 0.3s;
-}
+  }
 
-.line.show p:nth-child(3) {
+  .line.show p:nth-child(3) {
     animation-delay: 0.5s;
-}
+  }
 
-@keyframes fadeIn {
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(10px);
+      opacity: 0;
+      transform: translateY(10px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
 
-  .line p{
+  .line p {
     color: red;
   }
 
-  #opt{
+  #opt {
     display: none;
     top: 0;
   }
 
-
   .dropdown-menu {
     transform: translateY(-10px);
     position: relative;
-    top: -10%;
+    top: -18%;
     visibility: 0;
     transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out;
     font-size: 10px;
@@ -2594,7 +2593,7 @@ footer {
   .background-shape {
     width: 92%;
     height: 280px;
-    margin-top: -330px;
+    margin-top: -380px;
   }
 }
 
@@ -2645,7 +2644,7 @@ footer {
   }
 
   .dropdown-menu {
-    top: -10%;
+    top: -18%;
     max-height: 100px;
     font-size: 10px;
     background-color: transparent;
