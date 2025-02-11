@@ -91,6 +91,10 @@ nav {
   min-width: 100px;
 }
 
+.line{
+  display: none;
+}
+
 .dropdown-menu li {
   padding: 8px 10px;
   z-index: 9;
@@ -828,7 +832,6 @@ nav {
  
 
 /* tes */
-
 .paragraf-banner {
   width: 100%;
   display: flex;
@@ -838,7 +841,7 @@ nav {
 
 .paragraf-banner > div {
   position: relative;
-  height: 40px;
+  height: 100%;
 }
 
 .paragraf-banner h4 {
@@ -848,7 +851,7 @@ nav {
   padding-inline: 16px;
 }
 
-.paragraf-banner h4::before {
+.paragraf-banner > div::before {
   content: "";
   position: absolute;
   left: 0;
@@ -858,7 +861,6 @@ nav {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Garis putih dengan efek mengalir turun */
 .paragraf-banner .reset.scroll1::after {
   content: "";
   position: absolute;
@@ -866,11 +868,11 @@ nav {
   top: 0;
   width: 2px;
   height: 0;
-  background: linear-gradient(to bottom, white 100%, transparent 100%);
-  animation: slideDown 7s ease-in-out forwards;
+  background: white;
+  animation: slideDown 6s ease-in-out forwards;
   animation-delay: 0s;
   animation-iteration-count: 1;
-  opacity: 0;
+  opacity: 1;
 }
 
 .paragraf-banner .reset.scroll2::after {
@@ -882,7 +884,7 @@ nav {
   height: 0;
   background: linear-gradient(to bottom, white 100%, transparent 100%);
   animation: slideDown 6s ease-in-out forwards;
-  animation-delay: 5.6s;
+  animation-delay: 4.8s;
   animation-iteration-count: 1;
   opacity: 1;
 }
@@ -896,7 +898,7 @@ nav {
   height: 0;
   background: linear-gradient(to bottom, white 100%, transparent 100%);
   animation: slideDown 6s ease-in-out forwards;
-  animation-delay: 11.5s;
+  animation-delay: 10.5s;
   animation-iteration-count: 1;
   opacity: 1;
 }
@@ -908,9 +910,9 @@ nav {
   top: 0;
   width: 2px;
   height: 0;
-  background: linear-gradient(to bottom, white 100%, transparent 100%);
+  background: white;
   animation: slideDown 6s ease-in-out forwards;
-  animation-delay: 16.9s;
+  animation-delay: 16s;
   animation-iteration-count: 1;
   opacity: 1;
 }
@@ -918,11 +920,9 @@ nav {
 @keyframes slideDown {
   0% {
     height: 0;
-    opacity: 1;
   }
   100% {
     height: 100%;
-    opacity: 1;
   }
 }
 
@@ -932,8 +932,8 @@ nav {
 
 /* Paragraf */
 .paragraf-banner p {
-  max-height: 0;
-  opacity: 0;
+  /* max-height: 0;
+  opacity: 0; */
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.5s ease;
   margin: 0;
@@ -946,7 +946,6 @@ nav {
   max-height: 100px;
   opacity: 1;
 }
-
 /* tes */
 
 .paragraf-banner h3,
@@ -2330,11 +2329,20 @@ footer {
     color: var(--primary-gray);
     display: flex;
     flex-direction: column;
+    height: 100px;
     transition: height 3s ease-in-out;
   }
 
   #opt {
     color: var(--primary-black);
+  }
+
+  #detail {
+    color: var(--primary-black);
+  }
+
+  #detail:hover {
+    color: var(--primary-gray);
   }
 
   #started:hover {
@@ -2354,25 +2362,83 @@ footer {
     transition: transform 0.3s;
   }
 
+  .line {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding-left: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.line.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.line p {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.line.show p:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.line.show p:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.line.show p:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  .line p{
+    color: red;
+  }
+
+  #opt{
+    display: none;
+    top: 0;
+  }
+
+
   .dropdown-menu {
     transform: translateY(-10px);
-    position: static;
-    top: 10%;
+    position: relative;
+    top: -10%;
     visibility: 0;
-    max-height: 100px;
     transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out;
     font-size: 10px;
     opacity: hidden;
     background-color: transparent;
     height: 0;
     box-shadow: none;
+    overflow: hidden;
   }
 
   .dropdown.active .dropdown-menu {
+    display: none;
     left: 0;
-    height: 100px;
+    height: 200px;
+    max-height: 130px;
     display: block;
-    display: flex;
+    /* display: flex; */
     visibility: visible;
     transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out;
     opacity: 1;
@@ -2384,7 +2450,7 @@ footer {
   .dropdown-menu li {
     text-decoration: none;
     background: transparent;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .heading-pricing {
@@ -2579,10 +2645,10 @@ footer {
   }
 
   .dropdown-menu {
-    top: 10%;
+    top: -10%;
     max-height: 100px;
     font-size: 10px;
-    background-color: #fff;
+    background-color: transparent;
     min-width: 80px;
   }
 
