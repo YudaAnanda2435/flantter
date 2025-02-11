@@ -2420,7 +2420,7 @@ footer {
   .dropdown-menu {
     transform: translateY(-10px);
     position: relative;
-    top: -18%;
+    top: -14%;
     visibility: 0;
     transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out;
     font-size: 10px;
@@ -2644,7 +2644,7 @@ footer {
   }
 
   .dropdown-menu {
-    top: -18%;
+    top: -14%;
     max-height: 100px;
     font-size: 10px;
     background-color: transparent;
