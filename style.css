@@ -112,6 +112,11 @@ nav {
   transition: 0.3s;
 }
 
+.nav-links{
+   -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 .nav-links .li {
   font-family: var(--primary-font);
   display: flex;
