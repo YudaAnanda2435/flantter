@@ -2372,7 +2372,7 @@ footer {
     flex-direction: column;
     gap: 12px;
     margin-bottom: 14px;
-    padding-left: 4px;
+    padding-left: 8px;
     font-size: 14px;
     opacity: 0;
     transform: translateY(-10px);
@@ -2662,7 +2662,7 @@ footer {
 
   #started {
     color: #fff;
-    padding: 6px 8px;
+    padding: 8px;
     border-radius: var(--border-xs);
   }
 
