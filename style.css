@@ -2681,14 +2681,14 @@ footer {
   .feature-desc {
     margin-top: auto;
   }
-
+/* 
   .dropdown-menu {
     top: -8%;
     max-height: 100px;
     font-size: 10px;
     background-color: transparent;
     min-width: 80px;
-  }
+  } */
 
   #lg-logo {
     z-index: 1;
