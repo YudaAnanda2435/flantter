@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     spaceBetween: 24,
     loop: true,
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
     slideActiveClass: "active",
     autoplay: {
       delay: 5000,
@@ -89,13 +89,6 @@ window.addEventListener("scroll", function () {
       contact.style.color = "black";
       nav.style.display = "flex";
       nav.style.justifyContent = "space-between";
-
-       clearTimeout(scrollTimeout);
-
-       scrollTimeout = setTimeout(() => {
-         nav.style.background = "transparent";
-         nav.style.backdropFilter = "blur(0)";
-       }, 10000);
     } else {
       blog.style.color = "";
       loginToggle.style.color = "var(--primary-gray)";
